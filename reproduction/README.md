@@ -1,46 +1,33 @@
 
 
-
-Specification of dependencies
-
-
-
-
-
-
-Training code
-Evaluation code
-Pre-trained models
-README file including table of results accompanied by precise commands to run/produce those results
-
-
-
-
-
-
-
-
-## Validation of mutual information estimator (Section 3 in paper)
-
-- Uses the `./led_array/estimator_and_microscopy_requirements.txt` environment
-
-
-
-## Information estimation on imaging applications (Section 4 in paper)
-
-### Fig 1
 (Conceptual, no experiments)
 
 
 ### Fig 2
 #### 2a
-    TODO
+- *Environment*: `lcfa_requirements.txt`
+- *Data*: [Shi's Re-processing of Gehler's Raw Dataset](https://www.cs.sfu.ca/~colour/data/shi_gehler/)
+- *Experiments*: 
+    - Script for E2E optimzation `./color_filter_array/recon.py` with config files `./color_filter_array/e2e_configs`
+    - Script for mutual information verfication `./color_filter_array/mi_calculation.py` with config files `./color_filter_array/mi_configs`
+    - Script for reconstruction training `./color_filter_array/recon.py` with config files `./color_filter_array/recon_configs`
+- *Analysis/figure* using  `./color_filter_array/recon_validation.py`, `./color_filter_array/results_viewer.ipynb`, and `./color_filter_array/sandbox.ipynb`
 
 #### 2b
-    TODO
+- *Environment*: `astronomy_requirements.txt` and `lensless_requirements.txt`
+- *Data*: `./radio_astronomy/2024_06_07_generate_many_black_holes.py` and `./radio_astronomy/2024_10_09_generate_black_hole_measurements_updated_template.py`
+- *Experiments*: 
+    - The script for mutual information estimation `./radio_astronomy/2024_10_11_mi_estimation_template.py`
+    - The script for black hole image reconstruction `./radio_astronomy/2024_10_09_reconstruction_template.py`
+- *Analysis/figure* using `./radio_astronomy/2024_10_15_mi_vs_reconstruction.ipynb` and `./radio_astronomy/2024_10_09_make_black_hole_figure.ipynb`
 
 #### 2c
-    TODO
+- *Environment*: `lensless_requirements.txt`
+- *Data*: [CIFAR10 Dataset](https://www.cs.toronto.edu/~kriz/cifar.html)
+- *Experiments*:
+    - The script for mutual information estimation `./lensless_imager/2024_10_23_pixelcnn_cifar10_updated_api_reruns_smaller_lr.py`
+    - The script for image reconstruction `./lensless_imager/2024_10_22_sweep_unsupervised_wiener_deconvolution_per_lens.py`
+- *Analysis/figure* using `./lensless_imager/2024_10_23_mi_vs_deconvolution_plots_cifar10_figure.ipynb`
 
 #### 2d
 - *Environment*: `led_microscopy_requirements.txt`
@@ -53,9 +40,13 @@ README file including table of results accompanied by precise commands to run/pr
 
 
 ### Fig 3
-    TODO
-
-
+- *Environment*: `lcfa_requirements.txt`
+- *Data*: [Shi's Re-processing of Gehler's Raw Dataset](https://www.cs.sfu.ca/~colour/data/shi_gehler/)
+- *Experiments*: 
+    - Script for IDEAL optimzation `./color_filter_array/ideal_optimization.py` with config files `./color_filter_array/ideal_configs`
+    - Script for mutual information verfication `./color_filter_array/mi_calculation.py` with config files `./color_filter_array/mi_configs`
+    - Script for reconstruction training `./color_filter_array/recon.py` with config files `./color_filter_array/recon_configs`
+- *Analysis/figure* using  `./color_filter_array/recon_validation.py`, `./color_filter_array/results_viewer.ipynb`, and `./color_filter_array/sandbox.ipynb`
 
 ## Supplementary figures
 
@@ -127,14 +118,30 @@ Conceptual, no experiments
 
 ### S20
 
-#### S20a 
-TODO
+#### top row
+- *Environment*: `lcfa_requirements.txt`
+- *Data*: [Shi's Re-processing of Gehler's Raw Dataset](https://www.cs.sfu.ca/~colour/data/shi_gehler/)
+- *Experiments*: 
+    - Script for E2E optimzation `./color_filter_array/recon.py` with config files `./color_filter_array/e2e_configs`
+    - Script for mutual information verfication `./color_filter_array/mi_calculation.py` with config files `./color_filter_array/mi_configs`
+    - Script for reconstruction training `./color_filter_array/recon.py` with config files `./color_filter_array/recon_configs`
+- *Analysis/figure* using  `./color_filter_array/recon_validation.py`, `./color_filter_array/results_viewer.ipynb`, and `./color_filter_array/sandbox.ipynb`
 
-#### S20b
-TODO
+#### middle row
+- *Environment*: `astronomy_requirements.txt` and `lensless_requirements.txt`
+- *Data*: `./radio_astronomy/2024_06_07_generate_many_black_holes.py` and `./radio_astronomy/2024_10_09_generate_black_hole_measurements_updated_template.py`
+- *Experiments*: 
+    - The script for mutual information estimation `./radio_astronomy/2024_10_11_mi_estimation_template.py`
+    - The script for black hole image reconstruction `./radio_astronomy/2024_10_09_reconstruction_template.py`
+- *Analysis/figure* using `./radio_astronomy/2024_10_15_mi_vs_reconstruction.ipynb`
 
-#### S20c 
-TODO
+#### bottom row
+- *Environment*: `lensless_requirements.txt`
+- *Data*: [CIFAR10 Dataset](https://www.cs.toronto.edu/~kriz/cifar.html)
+- *Experiments*:
+    - The script for mutual information estimation `./lensless_imager/2024_10_23_pixelcnn_cifar10_updated_api_reruns_smaller_lr.py`
+    - The script for image reconstruction `./lensless_imager/2024_10_22_sweep_unsupervised_wiener_deconvolution_per_lens.py`
+- *Analysis/figure* using `./lensless_imager/2024_10_23_mi_vs_deconvolution_plots_cifar10_figure.ipynb`
 
 
 ### S21
@@ -142,4 +149,12 @@ TODO
 - *Experiments/figure* `mi_estimator_experiments/mi_of_background.ipynb`
 
 ### S22
-TODO
+- *Environment*: `lensless_classifier_requirements.txt`
+- *Data*: [CIFAR10 Dataset](https://www.cs.toronto.edu/~kriz/cifar.html)
+- *Experiments*:
+    - The script for mutual information estimation `./lensless_imager/old_api/01_04_2024_pixelcnn_cifar10_10px_bias.py`
+    - The script for image classification `./lensless_imager/11_14_2023_run_classifier_cifar10.py`
+    - Classification models `./lensless_imager/old_api/classifier_results`
+- *Analysis/figure* using `./lensless_imager/01_09_2024_mi_vs_classification_plots_updated_mi_cifar10.ipynb`
+
+
