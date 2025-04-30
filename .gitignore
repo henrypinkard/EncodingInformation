@@ -3,6 +3,11 @@
 *.pyc
 *.pyo
 
+
+#data
+BSCCM*
+
+
 #pycharm files
 analysis/.idea/*
 Icon
