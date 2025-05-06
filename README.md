@@ -4,15 +4,17 @@
 [![PyPI - Downloads](https://img.shields.io/pypi/dm/encoding_information.svg)](https://pypistats.org/packages/encoding_information)
 
 
-Code and experiments from the paper [Information-driven design of imaging systems](https://waller-lab.github.io/EncodingInformationWebsite/). For detailed usage, see the [documentation](https://readthedocs.org/projects/encodinginformation/badge/?version=latest).
+Code and experiments from the paper **Information-driven design of imaging systems**.
+
+For information on reproducing the figures in the paper using this code, see `reproduction/README.md`
 
 ## Installation guide
 
-`pip install encoding_information`
+Navigate to directory of this repo and type:
 
-There may be more setup required to get the correct versions of Jax/Flax, see:
+`pip install -e .`
 
-https://github.com/Waller-Lab/EncodingInformation/blob/main/Installation_guide.md
+There may be more setup required to get the correct versions of Jax/Flax. See the `requirements*.txt` files in the `reproduction folder`.
 
 
 ## Quick Start
@@ -56,18 +58,3 @@ We provide three models with different tradeoffs:
 
 For highest accuracy, train multiple models and select the one giving the lowest information estimate, as each provides an upper bound on the true information content.
    
-
-## Documentation
-
-https://encodinginformation.readthedocs.io/en/latest/
-
-
-## Contributing
-
-1. Make a fork and clone the fork
-2. `git remote add upstream https://github.com/Waller-Lab/EncodingInformation.git`
-3. `git config pull.rebase false`
-4. Use pull requests to contribute
-5. `git pull upstream main` to pull latest updates from the main repo
-
-

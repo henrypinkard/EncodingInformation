@@ -4,7 +4,6 @@ build-backend = "flit_core.buildapi"
 
 [project]
 name = "encoding_information"
-authors = [{name = "Henry Pinkard"}]
 license = {file = "LICENSE"}
 classifiers = [
     "License :: OSI Approved :: BSD License"
@@ -28,5 +27,3 @@ datasets = ["pandas", "matplotlib", "scipy", "bsccm", "dask[array]", "zarr", "h5
 # documentation
 docs = ["sphinx", "sphinx_rtd_theme"]
 
-[project.urls]
-Home = "https://github.com/Waller-Lab/EncodingInformation"
